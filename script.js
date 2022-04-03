@@ -9,7 +9,7 @@ let score = 0;
 let record = localStorage.getItem('record'); 
 
 function handleKey(event) {
-    if (event.keyCode === 32 || event.keyCode === Touch) {
+    if (event.keyCode === 32 || event.touchend) {
         if(!isJumping) {
         jump();
         }
@@ -80,5 +80,7 @@ function updateRecord() {
     highestScore.innerHTML = record;
 }
 
+updateRecord();
 createCactus();
 document.addEventListener('keydown', handleKey);
+document.addEventListener('touchend', handleKey);
