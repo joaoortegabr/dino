@@ -82,5 +82,6 @@ function updateRecord() {
 
 updateRecord();
 createCactus();
+
 document.addEventListener('keydown', handleKey);
 document.addEventListener('touchend', handleKey);
