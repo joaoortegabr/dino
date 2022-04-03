@@ -90,4 +90,4 @@ updateRecord();
 createCactus();
 
 document.addEventListener('keydown', handleKey);
-document.addEventListener('touchend', handleTouch);
+document.addEventListener('touchstart', handleTouch);
