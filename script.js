@@ -9,10 +9,16 @@ let score = 0;
 let record = localStorage.getItem('record'); 
 
 function handleKey(event) {
-    if (event.keyCode === 32 || event.touchend) {
+    if (event.keyCode === 32) {
         if(!isJumping) {
-        jump();
+            jump();
         }
+    }
+}
+
+function handleTouch(event) {
+    if(!isJumping) {
+        jump();
     }
 }
 
@@ -84,4 +90,4 @@ updateRecord();
 createCactus();
 
 document.addEventListener('keydown', handleKey);
-document.addEventListener('touchend', handleKey);
+document.addEventListener('touchend', handleTouch);
